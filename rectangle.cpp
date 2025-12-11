@@ -1,22 +1,21 @@
 #include <iostream>
 
+using namespace std;
 class Rectangle {
-    private:
-
+private:
     double width;
-    double hight;
+    double height;
+public:
 
-    public:
-    Rectangle(double w, double h){
-        width = w;
-        height = h;
-    }
+    Rectangle(double w,double h)
+    :width(w),height(h) {}
+
     void setWidth(double w){
-        Width = w;
+        width=w;
     }
 
     void setHeight(double h){
-        height = h;
+        height=h;
     }
 
     double getWidth() const{
@@ -27,17 +26,20 @@ class Rectangle {
         return height;
     }
 
-    double area() const {
-        return height * width;
+    double area() const{
+        return height*width;
     }
 
-    double perimeter() const{
-        return height * 2 + width * 2;
+    double perimeter()const{
+        return 2*(height+width);
     }
 
-    void display() const{
-        cout << "Rectangle: " << width << "x" << height << endl; 
-        cout << area() << endl;
-        cout << perimeter() << endl;
+    void display()const{
+         
+        cout << "Rectangle: " << width<< "x" << height << endl;
+        cout<<"Area: "<< area() << endl;
+        cout<<"Perimeter:"<<perimeter()<<endl;
+        
     }
+
 };
